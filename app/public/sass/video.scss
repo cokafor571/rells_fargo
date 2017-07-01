@@ -1,0 +1,195 @@
+@import "fonts";
+@import "typography"; 
+@import "colors"; 
+
+//general 
+body {
+    font-family: $font_sans;
+
+    p {
+        line-height: 1.8em; 
+    }
+
+    h1 {
+        font-size: 2rem; 
+    }
+}
+
+// nav
+nav {
+    border-bottom: 1px solid rgba( 0,0,0,.1 ); 
+    background: white; 
+
+    .nav-group {
+
+        h1 {
+            display: inline-block; 
+            font-size: 1.5rem; 
+
+            &.main {
+                margin: 0 auto; 
+                padding-right: 5em; 
+            }
+        }
+
+        .logo {
+            margin-left: 1.5em; 
+        }
+    }
+}
+
+/* intro */ 
+
+.intro {
+    margin-top: 8em;
+
+    h1 {
+        font-weight: 700;
+    }
+
+    p {
+        text-align: center;
+        margin: 0 auto; 
+        margin-top: 3em; 
+        font-weight: 700;
+
+        &:first-of-type {
+            font-weight: 400;
+        }
+
+        &:nth-of-type(2) {
+            font-size: 1.1rem; 
+        }
+    }
+}
+
+/* video content */
+
+.video-intro {
+
+    margin-top: 5em;
+
+    p {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center; 
+    }
+
+    img {
+        display: block; 
+        margin: 2em auto; 
+    }
+}
+
+.video-section {
+    margin-top: 3em;
+
+    .video {
+        margin-top: 1em; 
+    }
+
+    .col-sm-12 {
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 700; 
+            text-align: center; 
+        }
+    }
+}
+
+/* picture section */ 
+
+.picture-section {
+    margin-top: 3em;
+    border-top: 1px solid rgba( 0,0,0,.2 );
+    border-bottom: 1px solid rgba( 0,0,0,.2 ); 
+    padding-top: 2em; 
+    padding-bottom: 2em; 
+
+    img {
+        width: auto;
+        max-width: 100%;
+        display: auto;
+        margin: 0 auto;  
+    }
+}
+
+/* mca info */ 
+
+.mca {
+    margin-top: 4em;
+    text-align: center; 
+
+    h5 {
+        color: $main_color;
+        font-weight: 700;
+    }
+
+    .last-section {
+        margin-top: 2em; 
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    p {
+        margin-top: 2em; 
+    }
+
+    ul {
+        list-style: none; 
+        padding: 0; 
+        margin-top: 1.5em; 
+
+        li {
+            margin-top: .25em; 
+        }
+    }
+}
+
+// training 
+.training {
+    margin-top: 4em;
+
+    h2 {
+        font-weight: 700; 
+        margin-bottom: 1em; 
+    } 
+
+    p,
+    ul {
+        color: rgba( 0,0,0,.6 );
+
+        li {
+            margin-top: 0.5em; 
+            font-size: 1.1rem; 
+        }
+    }
+}
+
+// get started 
+.get-started {
+    margin-top: 3em;
+    border-top: 1px solid rgba( 0,0,0,.2 ); 
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    img {
+        display: block;
+        margin: 0 auto; 
+        transition: 0.3s ease; 
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    p {
+        margin: 2em auto;
+        font-size: 1.2rem; 
+
+        span {
+            font-weight: 700; 
+        }
+    }
+}
