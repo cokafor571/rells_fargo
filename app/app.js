@@ -1,20 +1,22 @@
-var express = require( 'express' );
-var app = express(); 
-var reload = require( 'reload' ); 
-var nodemailer = require( 'nodemailer' );
-var bodyParser = require( 'body-parser' );
-var expressValidator = require( 'express-validator' ); 
+var express = require( 'express' ),
+    app = express(), 
+    compression = require( 'compression' ), 
+    helmet = require('helmet'), 
+    nodemailer = require( 'nodemailer' ),
+    bodyParser = require( 'body-parser' ),
+    expressValidator = require( 'express-validator' ); 
 
 
-app.set( 'port', process.env.PORT || 3000 ); 
-app.set( 'view engine', 'ejs' ); 
+app.set( 'view engine', 'ejs' );
 app.set( 'views', 'app/views' ); 
 
+app.use(compression() );
+app.use(helmet() );
 app.use(express.static(__dirname + '/public' ) ); 
 app.use(require( './routes/index' ) ); 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(expressValidator());
+app.use(bodyParser.json() );
+app.use(bodyParser.urlencoded({ extended: true }) );
+app.use(expressValidator() );
 
 //Form email 
 app.post( '/', function( req, res ) {
@@ -61,14 +63,8 @@ app.post( '/', function( req, res ) {
         if (error) {
             return console.log(error);
         }
-        console.log('Message %s sent: %s', info.messageId, info.response);
         res.redirect('/video');
     });
 });
 
-var server = app.listen(app.get('port'), function() {
-  console.log('Listening on port ' + app.get('port'));
-});
-
-reload( server, app );
-
+module.exports = app;
