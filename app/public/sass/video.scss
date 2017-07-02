@@ -78,6 +78,7 @@ nav {
     img {
         display: block; 
         margin: 2em auto; 
+        max-width: 100%;
     }
 }
 
@@ -85,7 +86,22 @@ nav {
     margin-top: 3em;
 
     .video {
-        margin-top: 1em; 
+
+        &.rell,
+        &.others {
+
+            video {
+                width: 50%;
+                display: block;
+                margin: 0 auto 3em;
+            }
+
+            iframe {
+                display: block;
+                margin: 3em auto; 
+                max-width: 100%;
+            }
+        }
     }
 
     .col-sm-12 {
@@ -110,8 +126,12 @@ nav {
     img {
         width: auto;
         max-width: 100%;
-        display: auto;
+        display: block;
         margin: 0 auto;  
+
+        @media (max-width: 575px) {
+            margin-bottom: 1em;
+        }
     }
 }
 
@@ -177,7 +197,8 @@ nav {
     img {
         display: block;
         margin: 0 auto; 
-        transition: 0.3s ease; 
+        transition: 0.3s ease;
+        max-width: 100%; 
 
         &:hover {
             transform: scale(1.2);

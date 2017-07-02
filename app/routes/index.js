@@ -7,8 +7,8 @@ router.get( '/', function( req, res ) {
     res.render( 'index' ); 
 });
 
-router.get( '/video', function( req, res ) {
-    res.render( 'video' ); 
+router.get( '/mca', function( req, res ) {
+    res.render( 'mca' ); 
 });
 
 module.exports = router; 

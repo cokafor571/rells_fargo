@@ -2,9 +2,6 @@
   "name": "rells_fargo",
   "version": "1.0.0",
   "description": "mca website",
-  "engines": {
-    "node": "6.10.0"
-  },
   "scripts": {
     "start": "node ./app/bin/www",
     "devstart": "concurrently \"gulp\" \"nodemon -e css,ejs,js,scss,json --watch ./app/bin/www\" "

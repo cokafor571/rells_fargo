@@ -63,7 +63,7 @@ app.post( '/', function( req, res ) {
         if (error) {
             return console.log(error);
         }
-        res.redirect('/video');
+        res.redirect('/mca');
     });
 });
 
