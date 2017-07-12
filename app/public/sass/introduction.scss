@@ -1,0 +1,44 @@
+@import "animation";
+@import "nav";
+
+body {
+    color: rgba(0,0,0,.75);
+}
+
+.introduction {
+    margin-top: 7em;
+
+    h1 {
+        margin-bottom: 1em;
+        opacity: 0;
+        animation: fadeIn 0.5s linear forwards,
+                   moveUp 0.5s linear both;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin-bottom: 1.5em;
+        opacity: 0;
+        animation: fadeIn 0.5s linear .5s forwards,
+                   moveUp 0.5s linear .5s both;
+        
+        span {
+            font-weight: 700;
+        }
+    }
+
+    iframe {
+        display: block;
+        margin: 0 auto;
+        opacity: 0;
+        animation: fadeIn 0.5s linear 1s forwards,
+                   moveUp 0.5s linear 1s both;
+    }
+
+    h3 {
+        margin-top: 1em;
+        opacity: 0;
+        animation: fadeIn 0.5s linear 1.5s forwards,
+                   moveUp 0.5s linear 1.5s both;
+    }
+}
