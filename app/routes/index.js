@@ -11,8 +11,8 @@ router.get( '/mca', function( req, res ) {
     res.render( 'mca' ); 
 });
 
-router.get( '/learnmore', function( req, res ) {
-    res.render( 'learnmore' ); 
+router.get( '/join-mca', function( req, res ) {
+    res.render( 'join-mca' ); 
 });
 
 module.exports = router; 

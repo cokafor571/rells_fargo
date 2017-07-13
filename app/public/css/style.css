@@ -29,6 +29,22 @@
     font-size: 1rem; 
 }
 
+.headline {
+    color: aqua;
+    text-align: center;
+    width: 100%;
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+@media (min-width: 830px) {
+
+    .headline {
+        font-size: 1.8rem;
+    }
+}
+
 .btn {
     background-color: rgba(41,4,36,0.75);
     color: white; 
