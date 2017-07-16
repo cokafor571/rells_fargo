@@ -1,3 +1,22 @@
+@media (max-width: 1024px) {
+    body {
+        background: url( ../images/rell_bg-image.jpg ) no-repeat center center;
+        background-size: cover; 
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    body .container-fluid {
+        height: 100vh;
+    }
+}
+@media (max-width: 1024px) {
+    body .container-fluid .row {
+        height: 100%;
+    }
+}
+
 /* Form */
 .form {
     display: block; 
@@ -13,7 +32,13 @@
     box-sizing: border-box; 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+    .captureform {
+        width: 60%; 
+    }
+}
+
+@media (min-width: 1024px) {
     .captureform {
         width: 40%; 
     }
@@ -78,6 +103,7 @@
 }
 
 #video-background {
+  display: none;
   position: fixed;
   right: 0; 
   bottom: 0;
@@ -86,4 +112,11 @@
   width: auto; 
   height: auto;
   z-index: -100;
+}
+
+@media (min-width: 768px) {
+
+    #video-background {
+        display: block;
+    }
 }
